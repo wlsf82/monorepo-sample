@@ -1,1 +1,1 @@
-console.log("bar");
+if (true) console.log("bar");
