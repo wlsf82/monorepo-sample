@@ -1,5 +1,5 @@
 #!/bin/bash -e
-export IGNORE_FILES_AND_DOT_SEMAPHORE_DIRECTORY=$(ls -p | grep -v /):.semaphore
+export IGNORE_FILES_AND_DOT_SEMAPHORE_DIRECTORY=$(ls -pa | grep -v /):.semaphore
 
 detect_changed_folders() {
   echo "detecting changes for this build"
