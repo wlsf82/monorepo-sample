@@ -15,6 +15,7 @@ run_tests() {
     if ! [[ " ${IGNORE_FILES_AND_DOT_SEMAPHORE_DIRECTORY[@]} " =~ "$component" ]]; then
       echo "------------------- Running tests for $component ---------------------"
       cd "$component"
+      npm i
       npm t
       cd ..
     else
