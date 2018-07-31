@@ -8,8 +8,18 @@ agent:
 blocks:
   - name: "Test"
     task:
-      jobs:
-      - name: Test
+      prologue:
         commands:
           - checkout
-          - ./detectChangedFolders.sh
+      jobs:
+      - name: service1
+        commands:
+          - ./test_if_there_are_changes.sh service1
+          
+      - name: service2
+        commands:
+          - ./test_if_there_are_changes.sh service2
+          
+      - name: service3
+        commands:
+          - ./test_if_there_are_changes.sh service3          
