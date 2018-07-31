@@ -1,1 +1,1 @@
-console.log("baz");
+if (true) console.log("baz");
