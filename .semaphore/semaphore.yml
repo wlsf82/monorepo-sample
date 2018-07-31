@@ -1,0 +1,23 @@
+version: "v1.0"
+name: monorepo-sample
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: "Test"
+    task:
+      prologue:
+        commands:
+          - checkout
+      jobs:
+      - name: service1
+        commands:
+          - ./testIfThereAreChanges.sh service1
+      - name: service2
+        commands:
+          - ./testIfThereAreChanges.sh service2
+      - name: service3
+        commands:
+          - ./testIfThereAreChanges.sh service3

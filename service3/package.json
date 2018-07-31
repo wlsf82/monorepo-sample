@@ -1,0 +1,18 @@
+{
+  "name": "service3",
+  "version": "1.0.0",
+  "description": "service3",
+  "main": "baz.js",
+  "scripts": {
+    "test": "node test.baz.js"
+  },
+  "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wlsf82/monorepo-sample"
+  }
+}
