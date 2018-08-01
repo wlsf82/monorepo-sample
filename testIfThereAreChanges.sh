@@ -1,12 +1,11 @@
 #!/bin/bash -e
 testIfThereAreChanges() {
   echo "detecting changes for this build"
-  directory=`git diff --name-only origin/master $1 | sort -u | awk 'BEGIN {FS="/"} {print $1}' | uniq`
-  export changed_components=$directory
+  export directory=`git diff --name-only origin/master $1 | sort -u | awk 'BEGIN {FS="/"} {print $1}' | uniq`
 }
 
 run_tests() {
-  for component in $changed_components
+  for component in $directory
   do
     echo "--------------------------------------------------------------------"
     echo "$component has changed"
